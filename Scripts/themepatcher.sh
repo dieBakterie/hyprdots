@@ -47,7 +47,7 @@ if [[ -z $1 || -z $2 ]]; then
     exit 1
 fi
 
-dcolDir="${confDir}/hyde/wallbash/Wall-Dcol"
+dcolDir="${confDir}/hypr/hyde/wallbash/Wall-Dcol"
 [ ! -d "${dcolDir}" ] && print_prompt "[ERROR]" "${dcolDir} do not exist!" && exit 1
 
 # set parameters
@@ -161,7 +161,7 @@ for indx in ${!prefix[@]}; do
 done
 
 # populate wallpaper
-Fav_Theme_Walls="${confDir}/hyde/themes/${Fav_Theme}/wallpapers"
+Fav_Theme_Walls="${confDir}/hypr/hyde/themes/${Fav_Theme}/wallpapers"
 [ ! -d "${Fav_Theme_Walls}" ] && mkdir -p "${Fav_Theme_Walls}"
 while IFS= read -r walls; do
     cp -f "${walls}" "${Fav_Theme_Walls}"
